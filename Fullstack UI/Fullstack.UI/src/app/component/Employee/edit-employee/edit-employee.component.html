@@ -1,0 +1,54 @@
+<div class="container my-5">
+
+    <h1 class="mb-3">Edit Employee</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateEmployee()">
+                <div class="form-group mb-3">
+                  <label for="id">Id</label>
+                  <input type="text" class="form-control mt-2" id="id" readonly
+                  name="id" [(ngModel)]="employeeDetails.id">
+                 
+                </div>
+                <div class="form-group mb-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control mt-2" id="name" placeholder="Enter Name"
+                    name="name" [(ngModel)]="employeeDetails.name">
+                   
+                  </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control mt-2" id="email" placeholder="Enter Email"
+                    name="email" [(ngModel)]="employeeDetails.email">
+                   
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="department">Department</label>
+                    <input type="text" class="form-control mt-2" id="department" placeholder="Enter Department"
+                    name="department" [(ngModel)]="employeeDetails.department">
+                   
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="phone">Phone</label>
+                    <input type="number" class="form-control mt-2" id="phone" placeholder="Enter Phone Number"
+                    name="phone" [(ngModel)]="employeeDetails.phone">
+                   
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="salary">Salary</label>
+                    <input type="number" class="form-control mt-2" id="salary" placeholder="Enter Salary"
+                    name="salary" [(ngModel)]="employeeDetails.salary">
+                   
+                  </div>
+                
+                <button type="submit" class="btn btn-primary mt-3">Save</button>
+  
+                 <button type="button" class="btn btn-danger mt-3 ms-2" (click)="deleteEmployee(employeeDetails.id)">Delete</button>
+
+              </form>
+
+        </div>
+    </div>
+    
+</div>
+
